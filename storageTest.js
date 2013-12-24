@@ -1,14 +1,8 @@
-﻿function $Test() {
-    document.getElementById("test1").value = "テスト";
-    
-    var expect = document.getElementById("test1").value;
-    var target = $("test1").value;
+﻿function $Test() {    
+    var expect = document.getElementById("test").value;
+    var target = $("test").value;
 
-    if (expect === target) {
-        document.getElementById("result").innerHTML = "OK";
-    } else {
-        document.getElementById("result").innerHTML = "NG";
-    }
+    __assert__("storage.js:8", expect === target, "");
 }
 
 window.addEventListener("load", function() {
